@@ -314,9 +314,9 @@ CREATE TABLE `ncp_cost_vm_daily` (
                                      `target_date` date NOT NULL COMMENT '대상 날짜 (일별)',
                                      `daily_charge_amount` double NOT NULL COMMENT '일별 청구 금액 (전일 대비 차이)',
                                      PRIMARY KEY (`id`),
-                                     KEY `idx_instance_date` (`instance_no`,`target_date`),
+                                     UNIQUE KEY `uk_instance_date` (`instance_no`,`target_date`),
                                      KEY `idx_target_date` (`target_date`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci COMMENT='NCP VM 일별 비용 데이터 (월별 데이터에서 계산)';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci COMMENT='NCP VM 일별 비용 데이터 (월별 데이터에서 계산)';
 
 -- cost.ncp_cost_vm_month definition
 

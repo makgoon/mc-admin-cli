@@ -405,6 +405,7 @@ services:
       aws.data.export.path.prefix: ${CO_AWS_CUR_EXPORT_PATH_PREFIX}
       AWS_ACCESS_KEY_ID: ${CO_AWS_ACCESS_KEY_ID}
       AWS_SECRET_ACCESS_KEY: ${CO_AWS_SECRET_ACCESS_KEY}
+      costopti.alarmservice.url: ${CO_ALARM_URL}
 
   mc-cost-optimizer-cost-processor:
     restart: on-failure
